@@ -8,8 +8,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+	
     use Notifiable;
-
+	
     /**
      * The attributes that are mass assignable.
      *
@@ -36,4 +37,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    
+    public $timestamps = false;
+//	public static function boot()
+//	{
+//		parent::boot();
+//
+//		static::creating(function ($model) {
+//			$model->created_at = $model->freshTimestamp();
+//		});
+//	}
+
 }
