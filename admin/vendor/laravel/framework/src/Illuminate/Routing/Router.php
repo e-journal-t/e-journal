@@ -22,6 +22,7 @@ use Psr\Http\Message\ResponseInterface as PsrResponseInterface;
 use Illuminate\Contracts\Routing\Registrar as RegistrarContract;
 use Symfony\Bridge\PsrHttpMessage\Factory\HttpFoundationFactory;
 use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
+use Illuminate\Support\Facades\DB as DB;
 
 /**
  * @mixin \Illuminate\Routing\RouteRegistrar

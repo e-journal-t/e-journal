@@ -61,6 +61,19 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="sboy-id" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+
+                            <div class="col-md-6">
+                                <select name="sboy_id" id="sboy-id" class="form-control">
+                                    @foreach ($test as $optionss)
+                                        <option value="{{$optionss->sboy_ticket}}">{{$optionss->sboy_second_name}} {{$optionss->sboy_first_name}} {{$optionss->sboy_middle_name}} ({{$optionss->sboy_ticket}})</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
