@@ -16,12 +16,15 @@ trait RegistersUsers
      *
      * @return \Illuminate\Http\Response
      */
+    
+    
+    
     public function showRegistrationForm()
     {
-	    $test = DB::table('Schoolboy')->get();
-        return view('auth.register', compact('test'));
+        return view('auth.register');
     }
-
+	
+	
     /**
      * Handle a registration request for the application.
      *

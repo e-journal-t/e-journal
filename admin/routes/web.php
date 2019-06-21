@@ -17,5 +17,15 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('admin_index', "AdminController@index_admin");
+
+Route::get('admin_index/admin_users_edit/{user_id}', "AdminController@index_admin_edit");
+
+Route::post('admin_index/admin_users_edit/{user_id}', "AdminController@updateUser");
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/addsboys', 'SboysController@ajaxRequest')->name('addsboys');
+
+Route::post('/addsboys', 'SboysController@ajaxRequestPost');
+
