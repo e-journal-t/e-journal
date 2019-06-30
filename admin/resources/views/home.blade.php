@@ -1,23 +1,27 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{{url('home/rating')}}">Оцінки</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Домашні завдання</a>
+            </li>
+        </ul>
+    </nav>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+    <div class="row">
+        <div class="col-12 col-md-8">
 
-                    You are logged in!
-                </div>
-            </div>
+                @if (session('status'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
+                @endif
+
+
         </div>
     </div>
-</div>
 @endsection

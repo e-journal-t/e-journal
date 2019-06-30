@@ -18,7 +18,8 @@ class Admin
     {
 	    if (Auth::user() &&  Auth::user()->type == 1) {
 		    return $next($request);
+	    }else{
+		    return redirect('/home/rating');
 	    }
-	    return abort(404);
     }
 }

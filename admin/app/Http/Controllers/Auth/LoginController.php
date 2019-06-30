@@ -43,7 +43,7 @@ class LoginController extends Controller
 		if(Auth::user()->type == 1) {
 			return redirect('/admin_index');
 		} else {
-			return redirect('/home');
+			return redirect('/home/rating');
 		}
 	}
 }
