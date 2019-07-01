@@ -44,63 +44,63 @@
                         <div class="col-md-8">
                             <div class="card">
                                 <div class="card-body">
-                                        <div class="form-group col-12">
-                                            <div class="row">
-                                                <label for="name" class="col-md-4 col-form-label ">Ім'я:</label>
+                                    <div class="form-group col-12">
+                                        <div class="row">
+                                            <label for="name" class="col-md-4 col-form-label ">Ім'я:</label>
 
-                                                <div class="col-md-6">
-                                                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                            <div class="col-md-6">
+                                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-12">
+                                        <div class="row">
+                                            <label for="email" class="col-md-4 col-form-label ">E-Mail:</label>
+
+                                            <div class="col-md-6">
+                                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                            </div>
+                                        </div>
+                                        @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="form-group col-12">
+                                        <div class="row">
+                                            <label for="password" class="col-md-4 col-form-label ">Пароль:</label>
+
+                                            <div class="col-md-6">
+                                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-12">
+                                        <div class="row">
+                                            <label for="password-confirm" class="col-md-4 col-form-label ">Підтвердження пароля:</label>
+
+                                            <div class="col-md-6">
+                                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-12 form-group'>
+                                        <div class='row'>
+                                            <label class='col-12 col-lg-4' >Права адміністратора:</label>
+                                            <div class='col-12 col-md-6 '>
+                                                <input name="title" id="edit_user_type" class='form-control mb-5 ' type="checkbox" >
+                                                <div class="col-md-12 text-center">
+                                                    <button type="button" onclick="addUser()" class="btn btn-primary">
+                                                        Зареєструвати
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
-
-                                        <div class="form-group col-12">
-                                            <div class="row">
-                                                <label for="email" class="col-md-4 col-form-label ">E-Mail:</label>
-
-                                                <div class="col-md-6">
-                                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-                                                </div>
-                                            </div>
-                                            @error('email')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                            @enderror
-                                        </div>
-
-                                        <div class="form-group col-12">
-                                            <div class="row">
-                                                <label for="password" class="col-md-4 col-form-label ">Пароль:</label>
-
-                                                <div class="col-md-6">
-                                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group col-12">
-                                            <div class="row">
-                                                <label for="password-confirm" class="col-md-4 col-form-label ">Підтвердження пароля:</label>
-
-                                                <div class="col-md-6">
-                                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class='col-12 form-group'>
-                                            <div class='row'>
-                                                <label class='col-12 col-lg-4' >Права адміністратора:</label>
-                                                <div class='col-12 col-md-6 '>
-                                                    <input name="title" id="edit_user_type" class='form-control mb-5 ' type="checkbox" >
-                                                    <div class="col-md-12 text-center">
-                                                        <button type="button" onclick="addUser()" class="btn btn-primary">
-                                                            Зареєструвати
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

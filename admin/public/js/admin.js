@@ -134,6 +134,11 @@ function addUser(){
     var type = $("#edit_user_type").val();
     var password_confirmation = $("#password-confirm").val();
 
+    if(password != password_confirmation){
+        alert('Паролі не співпадають');
+        return false;
+    }
+
     window.history.pushState('','','/admin_index/nav-new-users');
 
     $.ajax({

@@ -20,6 +20,7 @@ $(document).ready(function() {
     }).val(date);
     getSboys();
 
+
 });
 
 function getSboys(){
@@ -50,6 +51,7 @@ $('#search_form').submit(function(e){
     var rating_period = $("#rating_period").val();
     var rating_year = $("#rating_year").val();
     var sboy_id = $("#sboys_select").val();
+    var rating_type = $("#rating_type").val();
 
     window.history.pushState('','', '/home/rating/search');
 
@@ -63,6 +65,7 @@ $('#search_form').submit(function(e){
             rating_period:rating_period
             , rating_year:rating_year
             , sboy_id:sboy_id
+            , rating_type:rating_type
         },
 
         success:function(data){

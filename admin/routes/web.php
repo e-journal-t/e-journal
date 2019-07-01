@@ -43,3 +43,5 @@ Route::post('home/rating/search', "UserRatingController@getRatings");
 
 //User settings
 Route::get('home/settings', "UserRatingController@renderUserSettings");
+Route::post('home/settings/edit', "UserRatingController@changeSettings");
+Route::post('home/settings', "UserRatingController@renderSettingsData");

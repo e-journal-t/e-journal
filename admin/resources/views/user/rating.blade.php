@@ -48,6 +48,19 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-12 form-group">
+                    <div class="row">
+                    <label class="col-12 col-md-3">Тип оцінки:</label>
+                        <div class="col-7 col-md-5">
+                            <select name="rating_type" id="rating_type" class="form-control">
+                                <option value="">-- Виберіть тип оцінки --</option>
+                                @foreach($rating_type as $type)
+                                    <option value="{{$type->rating_type_id}}">{{$type->rating_type_name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                </div>
                 <div class="form-group col-md-12">
                     <form action="" id="search_form">
                         <div class="row">
@@ -65,19 +78,6 @@
         </div>
     </div>
     <div id="journal" class="d-none">
-
-            {{--<div class="col-2 pr-0">--}}
-                {{--<div class="table-responsive">--}}
-                    {{--<table class="table table-bordered table-striped table-sm" width="100%">--}}
-                        {{--<thead>--}}
-                            {{--<th>Предмети</th>--}}
-                        {{--</thead>--}}
-                        {{--<tbody id="subjects_table">--}}
-
-                        {{--</tbody>--}}
-                    {{--</table>--}}
-                {{--</div>--}}
-            {{--</div>--}}
         <div class="col-12">
             <div class="table-responsive">
                 <table class="table table-bordered table-striped table-sm" width="100%">
@@ -95,5 +95,4 @@
 
 @push('scripts')
     <script src="{{asset('js/rating.js')}}"></script>
-
 @endpush

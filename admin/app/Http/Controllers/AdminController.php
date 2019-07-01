@@ -133,17 +133,17 @@ class AdminController extends Controller
 		
 		
 		if(empty($name) or empty($email) or empty($password) or empty($confirm_password)){
-			return false;
+			return response()->json(['message' => "error"]);
 		}
 		
 		if($password != $confirm_password){
-			return response()->json(['message' => "Паролі не співпадають"]);
+			return response()->json(['message' => "error"]);
 		}
 		
 		$emails = DB::table('Users')->get();
 		foreach ($emails as $e){
 			if($email == $e->email){
-				return response()->json(['message' => "Користувач з такою поштою зареєсттрований"]);
+				return response()->json(['message' => "error"]);
 			}
 		}
 		
