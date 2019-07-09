@@ -169,7 +169,7 @@ class DatabaseTokenRepository implements TokenRepositoryInterface
      */
     public function createNewToken()
     {
-        return hash_hmac('sha256', Str::random(40), $this->hashKey);
+        return bcrypt(hash_hmac('sha256', Str::random(60), $this->hashKey));
     }
 
     /**
