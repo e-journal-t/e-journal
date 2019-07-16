@@ -87,7 +87,7 @@ $("#add_sboy_btn").click(function(e){
 
         }
         , error:function(data){
-            alert(data.message);
+            alert('Не вдалось додати школяра!');
         }
 
     });
@@ -113,7 +113,7 @@ function deleteSboy(id){
 
         }
         , error:function(data){
-            alert(data.message);
+            alert('Помилка');
         }
 
     });
