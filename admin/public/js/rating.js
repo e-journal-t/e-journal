@@ -75,9 +75,6 @@ $('#search_form').submit(function(e){
             $('#rating_table').html(data.rating_table);
 
         }
-        , error:function(data){
-            alert(data.message);
-        }
     });
 });
 

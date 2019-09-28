@@ -68,8 +68,14 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home/rating') }}">До журналу</a>
+                        <a href="{{ url('/home/rating') }}">Журнал</a>
+                        @if (Auth::user()->type == 1)
+                            <a class="dropdown-item" href="http://127.0.0.1:8000/admin_index">
+                                Сторінка адміністратора
+                            </a>
+                        @endif
                     @else
+
                         <a href="{{ route('login') }}">Увійти</a>
 
                         @if (Route::has('register'))
